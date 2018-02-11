@@ -520,9 +520,6 @@ function VirtuosoJhin:OnTick()
     if GetKeyPress(self.Combo) > 0 then	
       self:ComboJhin()
     end
-    if GetKeyPress(self.LaneClear) > 0 then	
-        self:LaneClearQWE()
-      end
     if GetKeyPress(self.Act_Utim) > 0 then	
         self:AtiveUti()
     end
