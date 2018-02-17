@@ -121,7 +121,6 @@ function DanceKat:OnDrawMenu()
             self.CE = Menu_Bool("Combo E", self.CE, self.menu)
             self.EonlyD = Menu_Bool("Only on Dagger", self.EonlyD, self.menu)
             self.CR = Menu_Bool("Combo R", self.CR, self.menu)
-            self.RAmount = Menu_SliderInt("Enemys Hit!", self.RAmount, 0, 5, self.menu)
 			Menu_End()
         end
         if (Menu_Begin("Lane")) then
@@ -339,7 +338,7 @@ function DanceKat:CastW(unit)
 end
 
 function DanceKat:CastR(unit)
-    if isReady(_R) and GetDistanceSqr(unit) < self.R.Range * self.R.Range and unit.HP/unit.MaxHP*100 < 25 then
+    if isReady(_R) and GetDistanceSqr(unit) < self.R.Range * self.R.Range and unit.HP/unit.MaxHP*100 < 35 then
 		CastSpellTarget(unit.Addr, _R)
 	end 
 end 
